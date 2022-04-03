@@ -1,0 +1,355 @@
+/* Stylesheet für Selfhtml Design 03 
+  responsives Layout mit Grid Layout ab Z. 210   */
+
+/* ====================================================   GLOBAL DEFINITION   ==================================================== */
+
+/* alternatives Boxmodell */
+html { 
+    box-sizing: border-box; 
+    background: #d5d5d5;	
+  } 
+  
+  *, ::before, ::after { 
+    box-sizing: inherit; 
+  }
+  
+  body {
+      max-width: 75em;
+      margin:0 auto;
+      padding: 0;
+      background: #fff;	
+      color: #333; 
+      font: normal 1em Arial, sans-serif;  /* Mindestschriftgröße wird dem Browser, bzw. dem Nutzer überlassen! */
+                      
+  }
+  
+ .logo {
+	border-radius: 10px;
+	float: right;
+	margin-right: 15px;
+	margin-top: 22px;
+}	
+  
+  
+  
+  /* ====================================================   HEADER   ==================================================== */
+  
+  header {
+      position: relative;		
+      height: 210px;
+      margin: 2em  0  0 3em;
+      background: rgb(235,0,0) url("../img/Design03-head.jpg") no-repeat right; 
+      background-size: contain; 			 
+      padding: 0 0 0.5em;
+  }
+  
+  header a h1,
+  header a p {			/*Die Angaben für h1 müssen mit einem genauen Selektor überschrieben werden. */
+      color: white; 
+      border-left: 0;
+      padding: 0;
+      display: table;		/* Überschriften und Absätze sind sonst immer 100% breit, durch display:table und display: inline-block; für das Elternelement a.ribbon wird das Banner nur so breit wie nötig. */
+  }
+  
+  .ribbon {
+      display: inline-block;
+      position: relative;	
+      margin: 2em 0 2em -1.5em;
+      padding: 0.5em 1em;
+      background: rgb(45, 50, 125);
+      box-shadow: 0px 1px 3px rgba(0,0,0,.8);
+  }
+   
+  .ribbon::before{
+      display: block;
+      width: 1.5em;
+      height: 0;
+      position: absolute;
+      bottom: -1.5em;
+      left: 0em;
+      content: "";
+      border-bottom: 1.5em solid transparent;
+      border-right: 1.5em solid rgb(0, 80, 116);
+  }
+   
+  /** CONTENT **/
+  
+  main {
+      margin: 0 0 1em;
+      padding: 1em;
+      background: #fff;
+  }
+  
+  h1,
+  h2 {
+      font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; 
+      padding-left: 1em; 
+      color: #666; 
+      text-transform: uppercase;
+      border-left:5px solid #4e68AD;
+  }
+      
+  h2 span {
+      font-size: 0.70em; 
+      color: #818181; 
+      text-transform: none;
+  }
+  
+  h3	{ 
+      font-size: 1.25em; 
+      font-weight: normal; 
+      padding: 0px; 
+      margin: 0px; 
+      color: #4E68AD; 
+  }		
+  
+  a 	{ 
+      color: #4e7a92; 
+      outline: none; 
+      text-decoration: none; 
+  }
+  a:hover, 			/* Durch Maus oder Tastatur angewählte Verweise werden sichtbar gemacht */
+  a:focus { 
+      color: white; 
+      text-decoration: none; 
+      background-color: #4e7a92;	
+  }
+  
+  a.more	{ 
+      float: right; 
+      font-weight: bold; 
+  }
+  
+  a.more:after{
+      content:" \2192 ";
+      font-size:1.2em;
+      font-weight:bold;
+  }
+  
+  ul.square {
+      list-style-type:square;
+      color: #999999;
+      margin: 0 0 0.5em 0.5em;
+      font-size: 0.8em;
+      font-weight: bold;
+  }
+  
+  ul.square li{
+      padding:10px;	
+  }
+  
+  /*DL, DT, DD Datenliste*/
+  dl.grid { 
+    display: grid; 
+    grid-template-columns: 1fr 100%; 
+  }
+  dd { 
+    margin: 0; 
+    padding-left: 1em; 
+  }
+  
+  dd span:first-child {
+    display: inline-block;
+    width: 4em;
+  }
+  
+  dl.grid dd {
+    margin-bottom: 1em;
+  }
+  
+  a[href^="tel"] { white-space: nowrap; }
+  
+  ul#footer-nav li { 
+      list-style-type: none;  
+      displaY: inline;
+      padding: 0 0.5em; 
+      border-right: 1px  solid #ACACAC; 
+  }
+  
+  footer {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);	
+      padding: 1em;
+  }
+  
+  ul#footer-nav  li:last-child { 
+      border: none; 
+  }	
+  
+  ul#footer-nav img {
+      width: 1.5em;
+  }
+  
+  ul#footer-nav a:hover,
+  ul#footer-nav a:focus, 
+  ul#footer-nav a:active {
+      background: white;
+  }
+  
+  footer p {
+      text-align: right;
+  }
+  
+  /** Navigation **/
+  
+  nav#navigation{
+  }
+      
+  #navigation ul {
+      list-style-type: none;
+      width: 100%;
+      margin-bottom:30px;
+  }
+  
+  #navigation ul li.first-child	{ border-top: 1px #DBDBDB solid; }
+  
+  
+  #navigation ul li a {
+      display: block;
+      border-bottom: 1px solid #4e7a92;
+      font-size: 1.1em;
+      line-height: 1.5em;
+      padding: 1em 35px;
+      text-decoration: none;
+      width: 13em; 
+  }
+  
+  .nava {
+      color: rgb(212, 212, 212);
+  }
+  
+  #navigation ul li a:before{
+      content:" ";
+      display:inline-block;
+      width:1em;
+      height:1em;
+      border-left:5px solid #ffffff;;
+  }	
+          
+  nav a[aria-current=page]{
+   background: rgb(45, 50, 125);
+  }
+
+  .box_about {
+      margin-right: 10%;
+  }
+  
+  .spalte {
+    display: flex;
+  }
+  
+  .box_team {
+    margin-top: -3%;
+      width: 80%;
+      margin-left: 5%;
+  }
+  
+  
+  /* ========== repsonsives Grid-Layout ========== */
+  
+  /* mobile first - auf schmalen Bildschirmen wird alles untereinander platziert. */ 
+  
+  /* ab einer Breite von 30em haben zwei Spalten nebeneinander Platz: */
+  
+  @media (min-width: 30em) { 
+    main {
+        display: grid;	  
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1em;
+    }
+  
+    nav {
+      grid-column: 1 / 2;
+    }
+    
+    #intro {
+      grid-column: 2 / 3;
+      grid-row:    1 / 2;					
+    }
+  
+    article {
+      grid-column: 2 / 3;
+    }  
+    
+  }
+  
+  
+  
+  @media (min-width: 50em) { 
+    main {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   
+    nav {
+      grid-row: 1 / 4;
+    } 
+  
+    #intro {
+      grid-column: 2 / 4;
+      grid-row:    1 / 2;					
+    }
+  
+    article {
+      grid-column: 2 / 4;
+    }    
+    
+     aside {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;	
+    }   
+    
+  }
+
+  /* Three columns side by side */
+.column {
+  float: left;
+  width: 30%;
+  margin-bottom: 16px;
+  margin-right: 3.3%;
+  padding: 0 8px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 20px 16px 16px 16px;
+}
+
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}

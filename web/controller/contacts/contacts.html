@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/style_contact.css">
+	<title>LB02 SBB Profile reader</title>
+</head>
+<body>
+
+<header>
+    <a class="ribbon" tabindex="-1" title="zurück zur Startseite!" href="../../index.html">
+	   <h1 id="logo">SBB Profil reader</h1>
+       <p>WebWeDo LB02 - TBZ</p>
+    </a>
+	<img class="logo" src="../../images/logo.png" alt="webwedo logo" width="254px;">
+</header>
+
+<main>
+
+	<nav id="navigation">
+	<ul>
+			<li><a aria-current="page" class="nava" href="../../index.html">Home</a></li>
+			<li><a aria-current="page" class="nava" href="../../view/profile/profile.html">Mein Profil</a></li>
+			<li><a aria-current="page" class="nava" href="../../view/about/about.html">Über uns</a></li>
+	</ul>
+	</nav>
+     	
+	<section id="intro">   
+	<h2>Das Kontaktformular<span> ermöglicht dir die Kontaktaufnahme mit uns!</span></h2>
+    </section>
+    <form class="form">
+		<h2>Melde dich jetzt</h2>
+		<p type="Name:"><input placeholder="Dein Vor- oder Name..."></input></p>
+		<p type="Email:"><input placeholder="Deine E-Mail Adresse..."></input></p>
+		<p type="Nachricht:"><input placeholder="Formuliere hier dein Anliegen..."></input></p>
+		<button>Nachricht senden</button>
+		<div class="mail_box">
+		  <span class="fa fa-phone"></span>E-Mail:
+		  <span class="fa fa-envelope-o"></span> teodora.todorovic@edu.tbz.ch
+		</div>
+	  </form>
+	  <div class="div_google">
+	  <h2>Unser Standort</h2>
+        <iframe width="400" height="240" id="gmap_canvas"
+                src="https://maps.google.com/maps?q=ausstellungsstrasse%2070&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        </iframe>
+        <br>
+        <style>.mapouter{position:relative;text-align:right;height:240px;width:400px;}</style>
+        <style>.gmap_canvas {overflow:hidden;background:none!important;height:240px;width:400px;}</style>
+		</div>
+</main>
+<footer class="grid">
+    <ul id="footer-nav">
+		<li><a href="https://data.sbb.ch/api/v1/console" title="SBB API">SBB API</a></li>
+		<li><a href="contacts.html" title="">Kontakt</a></li>
+	</ul>   
+</footer>  
+    
+</body>
+</html>
